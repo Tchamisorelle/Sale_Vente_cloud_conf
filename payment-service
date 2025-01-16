@@ -1,0 +1,20 @@
+# Port d'écoute
+server.port=8085
+# URL du Registry-Service (Eureka)
+eureka.client.service-url.defaultZone = http://localhost:8761/eureka/
+eureka.client.register-with-eureka=true
+eureka.client.fetch-registry=true
+spring.cloud.gateway.discovery.locator.enabled=true
+
+#Connexion a RABBITMQ
+logging.level.org.springframework.amqp=DEBUG
+logging.level.org.springframework=DEBUG
+# Configuration RabbitMQ
+spring.rabbitmq.host=localhost
+spring.rabbitmq.port=5673
+spring.rabbitmq.username=guest
+spring.rabbitmq.password=guest
+
+
+# Exchange utilisé pour les événements du Catalog-Service
+payment.exchange=payment.exchange
